@@ -10,7 +10,6 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        outline: 1px solid re;
     }
 
     img{
@@ -250,7 +249,7 @@
     }
 
     .btn-ver{
-        margin: 15px 0;
+        margin: 15px 0 30px 0;
         padding: 8px 16px;
         background-color: var(--cor-primaria);
         color: var(--cor-fundo-card);
@@ -265,6 +264,83 @@
 
 
     /* =============== Inicio da pagina Inicio =============== */
+    #container-inicio{
+        width: 100%;
+        max-width: 1800px;
+        margin: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .desafio{
+        width: 100%;
+        position: relative;
+        top: -30px;
+        margin-bottom: -30px;
+        background-color: var(--cor-fundo-card);
+        box-shadow: 0px 0px 5px #0000003f;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .cards-desafios{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .card-desafio{/* mudar depois*/
+        box-shadow: 0px 0px 5px #0000005d;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        min-height: 250px;
+    }
+
+    .informacao-adicional{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cards-informacao{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .card-informa{
+        background-color: var(--cor-fundo-card);
+        box-shadow: 0px 0px 5px #0000003f;
+        padding: 20px;
+        min-height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .inforna1{
+        flex: 1 1 200px;
+    }
+
+    .inforna2{
+        flex: 2 1 300px;
+    }
+
+    .inforna3{
+        flex: 2 1 300px;
+    }
+
+    .inforna4{
+        flex: 1 1 150px;
+    }
     /* =============== Fim da pagina Inicio  =============== */
 
 
@@ -277,5 +353,14 @@
 
 
     /* =============== Inicio do Rodape da pagina =============== */
+    footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--cor-fundo-card);
+        min-height: 100px;
+        border-top: 2px solid #caddfd;
+        padding: 10px;
+    }
     /* =============== Fim do Rodape da pagina  =============== */
 }
