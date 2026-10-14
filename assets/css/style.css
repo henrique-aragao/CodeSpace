@@ -1,0 +1,281 @@
+@charset "UTF-8";
+@layer principal, responsivo;
+@import url('variable.css');
+@import url('dark.css');
+@import url('responsivo.css') layer(responsivo);
+
+@layer principal{
+    /* =============== Inicio do estilo global =============== */
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        outline: 1px solid re;
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+        display: block;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    a{
+        display: inline-block;
+        text-decoration: none;
+        user-select: none;
+        white-space: nowrap;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    h1, h2, h3{
+        font-family: var(--fonte-titulo);
+    }
+
+    body{
+        font-family: var(--fonte-texto);
+        background-color: var(--cor-fundo);
+    }
+    /* =============== Fim do estilo global =============== */
+
+
+    /* =============== Inicio do Menu da pagina =============== */
+    header{
+        background-image: url('../img/hero-menu.jpg');
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 60% auto;
+        box-shadow: 0px 2px 5px #00000015;
+    }
+
+    .cor-back{
+        padding: 10px 10px 20px 10px;
+        background-image: linear-gradient(to right, #FFF, #ffffff,#ffffff,#ffffff7a, #ffffff17, #ffffff05);
+    }
+
+    #conatainer-menu{
+        width: 100%;
+        max-width: 1800px;
+        margin: auto;
+    }
+    #menu{
+        padding: 10px 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .logo-menu{
+        align-self: flex-start;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex: 1;
+    }
+
+    .logo-menu-img img{
+        max-width: 60px;
+    }
+
+    .logo-menu-txt p{
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    .responsivo{
+        display: none;
+    }
+
+    .menu-responsivo{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex: 3;
+    }
+
+    .navega-menu{
+        display: flex;
+        justify-content: center;
+        background-color: #ffffff71;
+        box-shadow: 0px 0px 5px #0000005b;
+        width: 100%;
+        max-width: 280px;
+        height: 40px;
+        border-radius: 30px;
+    }
+
+    .navega-menu ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .navega-menu ul a {
+        position: relative;
+        font-size: 1.1rem;
+        font-weight: 500;
+        line-height: 1;
+        cursor: pointer;
+        transition: color .4s ease-in-out;
+    }
+
+    .navega-menu ul a:hover {
+        color: var(--cor-primaria);
+    }
+
+    .navega-menu ul a::before {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 0;
+        background-color: var(--cor-primaria);
+        left: 0;
+        top: 28px;
+        transition: width .4s ease-in-out;
+    }
+
+    .navega-menu ul a.atual{
+        color: var(--cor-primaria);
+    }
+
+    .navega-menu ul a.atual::before{
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: var(--cor-primaria);
+        left: 0;
+        top: 28px;
+    }
+
+    .navega-menu li:hover a::before {
+        width: 100%;
+    }
+
+    #btn-tema{
+        background-color: #dbdbdb;
+        cursor: pointer;
+        border: none;
+        width: 70px;
+        height: 30px;
+        border-radius: 30px;
+        padding: 2px;
+        
+    }
+
+    .bolinha{
+        display: block;
+        background-color: var(--cor-fundo-card);
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        transition: transform .5s ease-in;
+    }
+
+    #btn-tema:hover .bolinha{
+        transform: translateX(40px);
+    }
+
+    .gh{
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .git-hub{
+        text-align: center;
+        background-color: var(--cor-fundo-card);
+        box-shadow: 0px 0px 5px #00000046;
+        width: 100%;
+        padding: 8px 5px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: color .4s ease-in, background-color .4s ease-in, transform .1s ease-in-out;
+    }
+
+    .git-hub:hover{
+        background-color: var(--cor-secundria);
+        color: var(--cor-fundo-card);
+    }
+
+    .git-hub:active{
+        transform: translateY(4px);
+    }
+
+
+
+    #hero-menu{
+        display: flex;
+    }
+
+    .hero-menu-txt{
+        flex: 2;
+    }
+
+    .bem-vindo{
+        display: inline-block;
+        background-color: #035aef23;
+        padding: 6px 10px;
+        border-radius: 20px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        font-size: 1rem;
+        font-family: var(--fonte-texto);
+    }
+
+    .hero-menu-txt h1{
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+
+    .titulo-marcado{
+        color: var(--cor-primaria);
+    }
+
+    .hero-menu-txt p{
+        line-height: 1.2;
+        margin-bottom: 5px;
+        font-weight: 500;
+    }
+
+    .btn-ver{
+        margin: 15px 0;
+        padding: 8px 16px;
+        background-color: var(--cor-primaria);
+        color: var(--cor-fundo-card);
+        border-radius: 20px;
+    }
+
+    .hero-menu-img{
+        flex: 3;
+        height: 280px;
+    }
+    /* =============== Fim do Menu da pagina =============== */
+
+
+    /* =============== Inicio da pagina Inicio =============== */
+    /* =============== Fim da pagina Inicio  =============== */
+
+
+    /* =============== Inicio da pagina Projetos =============== */
+    /* =============== Fim da pagina Projetos  =============== */
+
+
+    /* =============== Inicio da pagina Sobre =============== */
+    /* =============== Fim da pagina Sobre  =============== */
+
+
+    /* =============== Inicio do Rodape da pagina =============== */
+    /* =============== Fim do Rodape da pagina  =============== */
+}
